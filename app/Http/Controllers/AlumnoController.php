@@ -83,4 +83,10 @@ class AlumnoController extends Controller
     {
         //
     }
+
+    public function espar(Request $request)
+    {
+        $respuesta = ((int)$request->input('numero') % 2 == 0) ? true : false;
+        return response()->json(['respuesta' => $respuesta]);
+    }
 }
