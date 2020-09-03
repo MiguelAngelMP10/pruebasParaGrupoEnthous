@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'AlumnoController@index');
+Route::get('espar', function () {
+    return view('par');
+});
+
+Route::post('/esparJson', 'AlumnoController@espar');
